@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  
+"http://struts.apache.org/dtds/struts-2.3.dtd"> 
+<struts>
+	<package name="card" namespace="/card" extends="mydefault">
+		<action name="*Card" class="action.CardAction" method="{1}">
+			<interceptor-ref name="myStack"></interceptor-ref>
+			<result name="addSuccess" type="redirect">/card/queryCard.action</result>
+			<result name="addFail">/addCard.jsp</result>
+			<result name="querySuccess">/queryCards.jsp</result>
+			<result name="detailcard">/detail.jsp</result>
+			<result name="deleteSelect">/deleteSelect.jsp</result>
+			<result name="deleteSuccess" type="redirect">/card/queryCard.action?act=deleteSelect</result>
+			<result name="updateSelect">/updateSelect.jsp</result>
+			<result name="updateAcard">/updateCard.jsp</result>
+			<result name="updateSuccess" type="redirect">/card/queryCard.action?act=updateSelect</result>
+		</action>
+	</package>
+</struts>

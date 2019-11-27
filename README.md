@@ -1,2 +1,2 @@
 # lol
-ni zai wan shen me gui dong xi?
+are you ok?
